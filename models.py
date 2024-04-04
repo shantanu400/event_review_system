@@ -19,4 +19,7 @@ class Review(db.Model):
     registration_rating = db.Column(db.Integer)
     event_experience_rating = db.Column(db.Integer)
     breakfast_rating = db.Column(db.Integer)
-    # Add more review fields as needed
+    likes = db.Column(db.Integer, default=0)
+    reports = db.Column(db.Integer, default=0)
+    flagged = db.Column(db.Boolean, default=False)
+    organizer_response = db.Column(db.String(512))
